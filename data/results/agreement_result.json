@@ -1,50 +1,312 @@
 {
-  "draftedBy": "Person 1",
-  "draftedFor": "Person 2",
-  "description": "This agreement is for the completion of a software development project by Person 2 for Person 1",
+  "draftedBy": "Designer",
+  "draftedFor": "Client",
+  "description": "Agreement for the Designer to provide graphic design services to the Client",
   "nonNegotiableClauses": [
-    "Confidentiality of all project-related information",
-    "Any changes to the project scope must be agreed upon by both parties in writing",
-    "Any delays in meeting the deadlines must be communicated immediately"
+    "The Designer shall provide specific graphic design services as listed in Attachment 1",
+    "The Services shall be completed in accordance with the schedule set forth in Attachment 2",
+    "The Client shall pay the fees set forth in Attachment 3",
+    "The Designer shall not be entitled to charge on a pro-rata basis for partial days worked by the Designer’s team unless it has the Client’s prior written consent to do so",
+    "The total price for the Services shall be the amount set forth in Attachment 3",
+    "The Client shall pay each invoice which is properly due and submitted to the Client by the Designer within ________ days of receipt by check or wire transfer as laid out in Attachment 3",
+    "Interest charge on overdue payments",
+    "Set off any amounts owed",
+    "The Designer shall allocate sufficient resources to the Services",
+    "The Designer shall meet the obligations set forth in Attachments 1 and 2",
+    "The designer must cooperate with the client in all matters relating to the services.",
+    "The designer's team must use reasonable skill and care in the performance of the services.",
+    "The Client may terminate this Agreement without liability to the Designer if the designer fails to meet the timelines",
+    "The Client must cooperate with the Designer in all matters relating to the Services",
+    "The Client must provide access to the Client’s data as may be reasonably requested by the Designer",
+    "The Client must provide the content and material reasonably necessary to carry out the Services in a timely manner",
+    "The designer will perform the services with reasonable care and skill and in accordance with generally recognized commercial practices and standards in the industry for similar services.",
+    "Client owns proprietary information",
+    "Designer has no rights to proprietary information",
+    "The designer continues to own any and all template designs it may have created prior to this Agreement.",
+    "The designer shall indemnify the Client against all damages, losses, and expenses arising as a result of any action or claim of infringement of Intellectual Property Rights of a third party.",
+    "The Designer will not share any proprietary information at any time",
+    "The Designer will not use any proprietary information for personal benefit",
+    "Material breach of obligations by the other party that is not remedied within 14 days of written notice",
+    "All licenses granted to the Designer under this Agreement shall terminate immediately",
+    "The Designer shall promptly return all of the Client’s content and materials and copies of all of the deliverables that were a result of the Services",
+    "The Designer represents and warrants that it has the right to utilize and distribute the designs created for the Client.",
+    "The Client represents and warrants that it has the rights to use any proprietary information it may provide to the Designer.",
+    "The Client will reimburse the Designer for any damages if the Client does not have the rights for the services",
+    "The Designer has no responsibility if the deliverables do not lead to the Client's desired result(s)",
+    "An event of Force Majeure includes any industrial dispute, governmental regulations, fire, flood, disaster, civil riot or war beyond the reasonable control of the affected Party",
+    "The affected Party must notify the other Party immediately in case of Force Majeure and inform the estimated period of failure/delay",
+    "The designer retains all rights to the original work until full payment is received",
+    "The client will not use the designs for any purpose other than what has been agreed upon without prior written consent from the designer"
   ],
   "deadlines": [
     {
-      "date": "2023-11-15",
-      "description": "First milestone"
+      "date": "undefined",
+      "description": "Provision of graphic design services by the Designer"
     },
     {
-      "date": "2025-01-20",
-      "description": "Delivery of the final project"
+      "date": "mentioned in Attachment 2",
+      "description": "Completion of Services"
+    },
+    {
+      "date": "end of each month",
+      "description": "Invoicing the Client monthly in arrears for its charges for time, expenses, and materials for the month concerned"
+    },
+    {
+      "date": "Not specified",
+      "description": "Payment of installments due upon achieving corresponding milestones"
+    },
+    {
+      "date": "on the due date",
+      "description": "Payment for materials, services, or reimbursement of expenses"
+    },
+    {
+      "date": "mentioned elsewhere in the agreement",
+      "description": "Provision of services and delivery of deliverables"
+    },
+    {
+      "date": "obtained from Attachment 2",
+      "description": "Meeting the timelines set forth in Attachment 2"
+    },
+    {
+      "date": "as set forth in Attachment 2",
+      "description": "Meeting the timelines for the Services"
+    },
+    {
+      "description": "Provide necessary data, content, and material in a timely manner"
+    },
+    {
+      "date": "Not specified",
+      "description": "Performance of services by the designer"
+    },
+    {
+      "date": "Not specified",
+      "description": "Delivery of services that conform to the client's descriptions and specifications"
+    },
+    {
+      "date": "end of the Agreement",
+      "description": "Delivery of final graphic design"
+    },
+    {
+      "date": "N/A",
+      "description": "Written notice of breach and requirement to remedy"
+    },
+    {
+      "date": "Upon expiration or termination of this Agreement",
+      "description": "Return of all materials and deliverables by the Designer"
+    },
+    {
+      "date": "the date the Services are agreed to begin",
+      "description": "The Client must provide all necessary proprietary information to the Designer"
+    },
+    {
+      "date": "Not mentioned",
+      "description": "Completion of services by the Designer"
+    },
+    {
+      "date": "N/A",
+      "description": "Notification of Force Majeure"
+    },
+    {
+      "date": "The date when the final design is due according to the agreement",
+      "description": "Delivery of the final design"
     }
   ],
   "termsAndConditions": [
     [
-      "Both parties should work under a partnership",
+      "The Client requires specific graphic design services, which the Designer shall provide - 3",
+      "The list of requested services is laid out in Attachment 1 - 0"
+    ],
+    [
+      "Fees and payment calculated by time and materials",
       3
     ],
     [
-      "All deliverables must meet the specified requirements and quality standards",
+      "Fees for the Services shall be calculated in accordance with the Designer’s standard daily fee rates for the Designer’s team",
+      3
+    ],
+    [
+      "The Designer’s standard daily fee rates for each individual person are calculated on the basis of an eight-hour day",
+      3
+    ],
+    [
+      "The Designer shall ensure that the members of the Designer’s team complete timesheets recording time spent on the Services",
+      3
+    ],
+    [
+      "Fees Calculated at Fixed Rate",
+      0
+    ],
+    [
+      "The Client shall pay the total price in installments, as set forth in Attachment 3",
+      3
+    ],
+    [
+      "The Client shall pay each invoice which is properly due and submitted to the Client by the Designer within ________ days of receipt by check or wire transfer as laid out in Attachment 3",
+      3
+    ],
+    [
+      "Payment for services and materials is subject to Client's written approval",
+      3
+    ],
+    [
+      "Designer to maintain complete and accurate records",
       4
     ],
     [
-      "Person 1 will provide the necessary resources and support",
+      "Client may inspect records at reasonable times",
+      4
+    ],
+    [
+      "Either party may set off amounts owed",
       3
     ],
     [
-      "Person 2 will be responsible for the development and delivery of the software application",
+      "The Designer shall provide the Services and deliver the deliverables in accordance with Attachments 1 and 2",
       3
     ],
     [
-      "Person 2 is bound to assist side support to the project for the next 6 months",
+      "The designer's team must observe all applicable rules and regulations and any other reasonable requirements that apply to the execution of the services.",
+      2
+    ],
+    [
+      "The designer must notify the client as soon as the designer becomes aware of any legal compliance hazards or issues which may arise in relation to the services.",
       3
     ],
     [
-      "Person 2 should hand over the ownership of their company free of cost to Person 1",
+      "The designer must obtain, or ensure that the client has obtained, and at all times maintain, all necessary licenses and consents and comply with all relevant legislation in relation to the services and the use of pre-existing material.",
+      4
+    ],
+    [
+      "The Client may refuse to accept any subsequent performance of the Services by the Designer",
+      2
+    ],
+    [
+      "The Client may purchase substitute services for another designer",
+      2
+    ],
+    [
+      "The Designer will be held accountable for any loss and additional costs incurred by the Client",
       1
     ],
     [
-      "Person 1 should pay Person 2 the agreed amount of $100,000 upon completion of the project",
+      "The Client may demand all sums previously paid by the Client to the Designer under this Agreement, but not yet earned, be refunded to the Client by the Designer",
+      1
+    ],
+    [
+      "The Client is responsible for ensuring that the material is appropriately licensed, consented, permitted, and accurate in all material respects",
+      3
+    ],
+    [
+      "The designer will inform the client as soon as it becomes aware of any changes in the applicable legislation.",
+      3
+    ],
+    [
+      "The terms of this section shall survive any performance, acceptance, or payment pursuant to this Agreement and shall extend to any substituted or remedial services provided by the designer.",
       4
+    ],
+    [
+      "Client owns final graphic design deliverables",
+      4
+    ],
+    [
+      "Client approval required before dispatch for third-party printing",
+      3
+    ],
+    [
+      "Client continues to own proprietary information",
+      5
+    ],
+    [
+      "The Designer will customize the Client’s deliverables to the Client’s specifications",
+      3
+    ],
+    [
+      "Graphic designs generally can have a common structure and basis",
+      0
+    ],
+    [
+      "The Designer will not share any of this proprietary information at any time",
+      5
+    ],
+    [
+      "The Designer also will not use any of this proprietary information for the Designer’s personal benefit at any time",
+      5
+    ],
+    [
+      "This section remains in full force and effect even after termination of the Agreement",
+      3
+    ],
+    [
+      "Either party may terminate the agreement if the other party becomes insolvent or there is a change of control of the other party",
+      3
+    ],
+    [
+      "Either party may terminate the agreement if the other party ceases to trade",
+      3
+    ],
+    [
+      "Either party may terminate the agreement if the other party has been subject to an event of Force Majeure for a continuous period of more than 90 days",
+      3
+    ],
+    [
+      "The Client shall pay the Designer any outstanding payment due and owing at the time of termination or expiration",
+      3
+    ],
+    [
+      "All provisions of this Agreement shall cease to have effect, except that any provision which can reasonably be inferred as continuing or is expressly stated to continue shall continue in full force and effect",
+      3
+    ],
+    [
+      "The Designer represents and warrants that the Designer has the right to enter into and perform this Agreement",
+      3
+    ],
+    [
+      "The Designer will reimburse the Client for any damages it may experience if the Designer does not have the rights to utilize and distribute the designs.",
+      3
+    ],
+    [
+      "The Client will be responsible for any damages it may experience if it does not have the rights to use the proprietary information it provides to the Designer.",
+      2
+    ],
+    [
+      "The Designer does not represent or warrant that the deliverables will create any additional profits, sales, exposure, brand recognition, or the like",
+      2
+    ],
+    [
+      "Under no circumstances shall either party be liable to the other party or any third party for any damages resulting from any part of this agreement such as, but not limited to, loss of revenue or anticipated profit, lost business, or costs of delay",
+      1
+    ],
+    [
+      "The affected Party shall take all reasonable steps to mitigate the effect of the Force Majeure",
+      3
+    ],
+    [
+      "Notices must be in writing in English, sent by personal delivery, facsimile, electronic mail or pre-paid first class registered mail",
+      3
+    ],
+    [
+      "The designer will provide a detailed proposal and estimate of costs before starting the project",
+      3
+    ],
+    [
+      "The client will provide timely feedback and approval to keep the project on schedule",
+      3
+    ],
+    [
+      "The client will pay the agreed upon fees upon completion of each stage of the project",
+      3
+    ],
+    [
+      "The designer will make any necessary revisions based on the client's feedback",
+      3
+    ],
+    [
+      "The final design will be considered approved if the client does not provide feedback within a certain number of days as stated in the agreement",
+      3
+    ],
+    [
+      "The designer will provide all source files to the client upon completion of the project",
+      3
     ]
   ]
 }
