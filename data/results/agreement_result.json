@@ -1,0 +1,50 @@
+{
+  "draftedBy": "Person 1",
+  "draftedFor": "Person 2",
+  "description": "This agreement is for the completion of a software development project by Person 2 for Person 1",
+  "nonNegotiableClauses": [
+    "Confidentiality of all project-related information",
+    "Any changes to the project scope must be agreed upon by both parties in writing",
+    "Any delays in meeting the deadlines must be communicated immediately"
+  ],
+  "deadlines": [
+    {
+      "date": "2023-11-15",
+      "description": "First milestone"
+    },
+    {
+      "date": "2025-01-20",
+      "description": "Delivery of the final project"
+    }
+  ],
+  "termsAndConditions": [
+    [
+      "Both parties should work under a partnership",
+      3
+    ],
+    [
+      "All deliverables must meet the specified requirements and quality standards",
+      4
+    ],
+    [
+      "Person 1 will provide the necessary resources and support",
+      3
+    ],
+    [
+      "Person 2 will be responsible for the development and delivery of the software application",
+      3
+    ],
+    [
+      "Person 2 is bound to assist side support to the project for the next 6 months",
+      3
+    ],
+    [
+      "Person 2 should hand over the ownership of their company free of cost to Person 1",
+      1
+    ],
+    [
+      "Person 1 should pay Person 2 the agreed amount of $100,000 upon completion of the project",
+      4
+    ]
+  ]
+}
