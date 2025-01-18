@@ -1,5 +1,6 @@
 import { ChatGroq } from "@langchain/groq";
 import dotenv from "dotenv";
+import {fetchRelatedDoc} from "../script.js";
 
 dotenv.config();
 
@@ -126,15 +127,15 @@ async function analyzeAgreementParts(agreementText, llm_number) {
     { role: "user", content: agreementText },
   ]);
 
-  console.log(
-    "\x1b[32m%s\x1b[0m",
-    "**********************************************"
-  );
-  console.log(aiResponse);
-  console.log(
-    "\x1b[32m%s\x1b[0m",
-    "**********************************************"
-  );
+  // console.log(
+  //   "\x1b[32m%s\x1b[0m",
+  //   "**********************************************"
+  // );
+  // console.log(aiResponse);
+  // console.log(
+  //   "\x1b[32m%s\x1b[0m",
+  //   "**********************************************"
+  // );
   let jsonResponse;
   try {
     jsonResponse = JSON.parse(aiResponse.content);
@@ -151,4 +152,31 @@ async function analyzeAgreementParts(agreementText, llm_number) {
   }
 
   return jsonResponse;
+}
+
+
+export async function analyzeQuery(query) {
+  const aiResponse = await llm[0].invoke([
+    {
+      role: "system",
+      content: `You are a query cleaning bot in the backend that analyzes user queries and outputs a JSON with a opening and closing curly bracket that contains a filtered out user query to search for in the body of huge text that we have. The JSON is of the form {'Query': '<this is the filtered out query>'}. DO NOT OUTPUT ANYTHING OTHER THAN THE JSON AND DO NOT ADD ANYTHING ELSE IN THE JSON. Just take the user question and distill out the actual query from it so we can perform a vector search on it. The query is {${query}}`,
+    }
+  ]);
+  // console.log("\x1b[32m%s\x1b[0m", "**********************************************");
+  // console.log(aiResponse)
+  // console.log("\x1b[32m%s\x1b[0m", "**********************************************");
+  let jsonResponse;
+  try {
+    // jsonResponse = JSON.parse(aiResponse.content);
+    jsonResponse = await fetchRelatedDoc(aiResponse.content);
+      console.log(jsonResponse);
+      return jsonResponse
+  } catch (error) {
+    console.error("Failed to parse AI response:", error);
+    jsonResponse = {
+      text: "Failed to find realted clause in any of agreements"
+    };
+ 
+  }
+  return jsonResponse
 }
