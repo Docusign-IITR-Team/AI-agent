@@ -1,72 +1,52 @@
 {
-  "draftedBy": "ayush",
-  "draftedFor": "arsh",
-  "description": "This agreement is for the lease of a property between ayush and arsh.",
+  "draftedBy": "undefined",
+  "draftedFor": "undefined",
+  "description": "undefined",
   "nonNegotiableClauses": [
-    "The lease term is from 1st jan 2025 to 1st dec 2025",
-    "The tenant must pay a monthly rent of ₹50000",
-    "The property shall be used exclusively for residential purposes.",
-    "Pets are not allowed on the premises.",
-    "Landlord has the right to enter the property in case of emergency",
-    "Tenant is responsible for keeping the property in good condition"
+    "The Service Provider is subject to penalties for downtime",
+    "This agreement constitutes the entire understanding between the parties and supersedes all prior agreements or understandings, whether written or oral."
   ],
   "deadlines": [
     {
-      "date": "2025-01-01",
-      "description": "Payment of the first month's rent and security deposit"
+      "date": "Upon termination",
+      "description": "The Service Provider shall deliver all outstanding deliverables"
     },
     {
-      "date": "Upon moving in",
-      "description": "Payment of security deposit and first month's rent"
-    },
-    {
-      "date": "Date: yes",
-      "description": "Landlord and Tenant have to execute this Lease Agreement"
+      "date": "2025-01-20",
+      "description": "Execution of the Service Level Agreement by both parties"
     }
   ],
   "termsAndConditions": [
     [
-      "The security deposit of ₹100000 will be refunded upon vacating the premises, subject to deductions for any damages or outstanding dues",
-      3
-    ],
-    [
-      "The tenant must pay a monthly rent of ₹50000 on or before the 5th of each month",
-      3
-    ],
-    [
-      "The Tenant agrees to maintain the property in good condition and promptly notify the Landlord of any necessary repairs.",
-      3
-    ],
-    [
-      "The Tenant is responsible for minor repairs, while the Landlord handles major repairs unless damage is caused by the Tenant's negligence.",
-      3
-    ],
-    [
-      "The Tenant is responsible for the payment of all utilities.",
-      3
-    ],
-    [
-      "The Tenant shall not make any alterations or improvements to the property without the prior written consent of the Landlord.",
+      "The Service Provider is responsible for meeting performance metrics outlined in Section 3",
       2
     ],
     [
-      "Either party may terminate this Agreement by providing 30 days written notice to the other party.",
+      "Both parties agree to keep confidential information secure",
       3
     ],
     [
-      "Tenant will pay a security deposit",
+      "Either party may terminate the agreement with 30 days written notice",
       3
     ],
     [
-      "Tenant will pay rent on the first of every month",
+      "This agreement is governed by the laws of India",
       3
     ],
     [
-      "Landlord is responsible for maintaining the structure of the building",
-      4
+      "Any amendments to this agreement must be made in writing and signed by both parties",
+      3
     ],
     [
-      "Tenant is responsible for paying utilities",
+      "PIWOT will provide services to Arshdeep as per the terms and conditions mentioned in this agreement.",
+      3
+    ],
+    [
+      "Arshdeep agrees to pay PIWOT for the services as per the payment terms mentioned in this agreement.",
+      3
+    ],
+    [
+      "Any changes to this agreement must be agreed upon in writing by both parties.",
       2
     ]
   ]
