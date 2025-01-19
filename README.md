@@ -41,6 +41,8 @@ Our architecture is designed to handle large-scale agreement management with spe
 6. **Agright.ai Core**
    - Combines all features, including agreement generation, collaborative editing, clause comparison, and notification management, into one seamless platform.
 
+7. **Witness creation**
+   - `witness.co` is used to provide immutable document witnessing on the blockchain so that the agreement cannot be tampered with and can be trusted by all parties.
 ## Workflow Overview
 
 1. **Search and Compare**  
