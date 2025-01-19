@@ -21,7 +21,7 @@ app.get('/categories', (req, res) => {
 app.post('/generate/:category', async (req, res) => {
     try {
         const { category } = req.params;
-        let { answers } = req.body;
+        const { answers } = req.body;
 
         if (!categories[category]) {
             return res.status(400).json({ error: 'Invalid category' });
@@ -31,20 +31,16 @@ app.post('/generate/:category', async (req, res) => {
             return res.status(400).json({ error: 'No answers provided' });
         }
 
-        // Remove any category from answers object as we use the URL parameter
-        delete answers.category;
-
         // Read template file with absolute path
-        const templatePath = path.join(process.cwd(), 'public', categories[category].template);
+        const templatePath = path.join(process.cwd(), 'public', 'rent.txt');
         console.log('Reading template from:', templatePath);
         
         if (!fs.existsSync(templatePath)) {
-            console.error(`Template file not found at ${templatePath}`);
             return res.status(500).json({ error: 'Template file not found' });
         }
 
         const templateContent = fs.readFileSync(templatePath, 'utf-8');
-        console.log('Template content length:', templateContent.length);
+        console.log('Template content:', templateContent);
 
         // Generate agreement
         const generatedAgreement = await generateAgreement(category, answers, templateContent);
@@ -79,14 +75,32 @@ app.post('/analyze', async (req, res) => {
         if (!text) {
             return res.status(400).json({ error: 'No text provided' });
         }
-        const analysis = await analyzeAgreement(text);
-        fs.writeFileSync(`data/${fileName}.txt`, JSON.stringify(text, null, 2));
 
-        fs.writeFileSync("data/results/agreement_result.json", JSON.stringify(analysis, null, 2));
+        // Clean the text by replacing multiple newlines with a single newline
+        const cleanedText = text
+            .replace(/\r\n/g, '\n') // Convert Windows line endings to Unix
+            .replace(/\r/g, '\n')   // Convert remaining carriage returns
+            .replace(/\n{3,}/g, '\n\n') // Replace 3 or more newlines with double newline
+            .trim(); // Remove leading/trailing whitespace
+
+        const analysis = await analyzeAgreement(cleanedText);
+        
+        // Save the cleaned text without JSON.stringify
+        fs.writeFileSync(
+            `data/${fileName}.txt`, 
+            cleanedText,
+            'utf-8'
+        );
+
+        // Save the analysis as JSON
+        fs.writeFileSync(
+            "data/results/agreement_result.json", 
+            JSON.stringify(analysis, null, 2)
+        );
+
         await AddFile(`data/${fileName}.txt`);
         res.json(analysis);
     } catch (error) {
-
         console.error('Error analyzing agreement:', error);
         res.status(500).json({ error: 'Error analyzing agreement' });
     }
