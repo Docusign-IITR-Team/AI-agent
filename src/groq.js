@@ -152,3 +152,123 @@ async function analyzeAgreementParts(agreementText, llm_number) {
 
   return jsonResponse;
 }
+
+export async function generateAgreement(category, answers, templateContent) {
+  // Create a mapping of answers to placeholders
+  let agreement = templateContent;
+
+  // Replace the date in the first line
+  agreement = agreement.replace(
+    '___ day of ________, 20',
+    answers.lease_date
+  );
+
+  // Replace landlord details
+  agreement = agreement.replace(
+    '[Landlord\'s Full Name]',
+    answers.landlord_name
+  ).replace(
+    '[Landlord\'s Address]',
+    answers.landlord_contact_address
+  );
+
+  // Replace tenant details
+  agreement = agreement.replace(
+    '[Tenant\'s Full Name]',
+    answers.tenant_name
+  ).replace(
+    '[Tenant\'s Address]',
+    answers.tenant_contact_address
+  );
+
+  // Replace property address
+  agreement = agreement.replace(
+    '[Complete Address of the Property]',
+    answers.property_address
+  );
+
+  // Replace lease terms
+  agreement = agreement.replace(
+    '[Start Date]',
+    answers.lease_term_start
+  ).replace(
+    '[End Date]',
+    answers.lease_term_end
+  );
+
+  // Replace rent details
+  agreement = agreement.replace(
+    '₹[Amount]',
+    `₹${answers.monthly_rent}`
+  ).replace(
+    '[Due Date]',
+    answers.rent_due_date
+  );
+
+  // Replace security deposit
+  agreement = agreement.replace(
+    'security amount of ₹[Amount]',
+    `security amount of ₹${answers.monthly_rent * 2}`
+  );
+
+  // Replace pet policy
+  agreement = agreement.replace(
+    '[Specify pet policy: e.g., "Pets are not allowed on the premises." or "Pets are allowed with prior written consent and may require an additional deposit."]',
+    `Pets are ${answers.allow_pets} on the premises`
+  );
+
+  // Replace notice period
+  agreement = agreement.replace(
+    '[Notice Period, e.g., "30 days"]',
+    '30 days'
+  );
+
+  // Replace governing law
+  agreement = agreement.replace(
+    '[State/Country]',
+    'India'
+  );
+
+  // Add additional sections for keys, inspection, and guests
+  const additionalSections = `\n12. Keys and Security
+
+The Tenant acknowledges receipt of all keys and access devices. In case of loss or damage, the Tenant shall pay ₹${answers.key_replacement_fee} for replacement.
+
+13. Property Inspection
+
+If the property is unoccupied for 4 or more consecutive days, ${answers.inspection_contact} will inspect the property to ensure its security.
+
+14. Guest Policy
+
+Guests may stay for up to ${answers.guest_stay_limit} days without written permission from the Landlord.
+
+15. Additional Contact Information
+
+For all notices under this Agreement:
+
+Landlord Contact Phone: ${answers.landlord_contact_phone}
+Tenant Contact Phone: ${answers.tenant_contact_phone}`;
+
+  // Insert additional sections before the witness section
+  agreement = agreement.replace(
+    /IN WITNESS WHEREOF/,
+    additionalSections + '\n\nIN WITNESS WHEREOF'
+  );
+
+  // Replace signature and witness sections
+  const signatureSection = `Landlord: ${answers.landlord_name}              Tenant: ${answers.tenant_name}
+
+Date: ${answers.agreement_signature_date}          Date: ${answers.agreement_signature_date}
+
+Witnesses:
+
+1. ${answers.landlord_name}                     2. ${answers.tenant_name}
+Date: ${answers.agreement_signature_date}        Date: ${answers.agreement_signature_date}`;
+
+  agreement = agreement.replace(
+    /Landlord: ___________________________ Tenant: ___________________________\s*\nDate: _______________________________ Date: _______________________________\s*\nWitnesses:\s*\n\s*___________________________ 2\. ___________________________\s*\nDate: _______________________________ Date: _______________________________/,
+    signatureSection
+  );
+
+  return agreement;
+}
