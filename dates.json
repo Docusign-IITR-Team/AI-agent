@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2025-01-19",
+    "to_notify": [
+      "vrm8000@gmail.com",
+      "theoniontetrishooter@gmail.com",
+      "varunrmallya@gmail.com"
+    ],
+    "message": "<h1>This is reminder from Agright.ai</h1><p>Deadline for Rental Agreement is today!! Please make the required payment</p>"
+  },
+  {
+    "date": "2025-01-20",
+    "to_notify": ["arshballs@69.com"],
+    "message": "<h1>This is reminder from Agright.ai</h1><p>Happy New Year yet again! 🎉</p>"
+  }
+]

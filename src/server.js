@@ -3,6 +3,7 @@ import { analyzeAgreement, analyzeQuery, generateWitness } from './groq.js';
 import dotenv from 'dotenv';
 import {AddFile, createAndStoreEmbedding} from "../script.js";
 import fs from 'fs';
+import { notifyDeadlines } from './notification.js';
 dotenv.config();
 createAndStoreEmbedding("data/", process.env.GOOGLE_API_KEY, "agreement");
 const app = express();
@@ -63,4 +64,5 @@ app.post('/witness', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+    notifyDeadlines();
 });
