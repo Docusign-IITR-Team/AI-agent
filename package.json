@@ -14,6 +14,7 @@
     "@langchain/community": "^0.3.25",
     "@langchain/google-genai": "^0.1.6",
     "@langchain/groq": "^0.1.3",
+    "@witnessco/client": "^0.6.0",
     "chromadb": "^1.10.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",

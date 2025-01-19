@@ -1,6 +1,7 @@
 import { ChatGroq } from "@langchain/groq";
 import dotenv from "dotenv";
 import {fetchRelatedDoc} from "../script.js";
+import { WitnessClient } from "@witnessco/client";
 
 dotenv.config();
 
@@ -179,4 +180,26 @@ export async function analyzeQuery(query) {
  
   }
   return jsonResponse
+}
+
+export async function generateWitness(fileName) {
+  
+	const witness = new WitnessClient();
+	const leafHash = witness.hash(fileName);
+	let timestamp;
+	try {
+		timestamp = await witness.postLeafAndGetTimestamp(leafHash);
+	}
+	catch (error) {
+		console.error(`witness.postLeafAndGetTimestamp failed for ${fileName}, leafHash ${leafHash}: ${error}`);
+		return;
+	}
+	console.log(`leaf ${leafHash} was timestamped at ${timestamp}`);
+	const proof = await witness.getProofForLeafHash(leafHash);
+	const verified = await witness.verifyProofChain(proof);
+	if (!verified) {
+		console.error('proof chain verification failed');
+		return;
+	}
+	return {leafhash: leafHash};
 }

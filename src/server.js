@@ -1,5 +1,5 @@
 import express from 'express';
-import { analyzeAgreement, analyzeQuery } from './groq.js';
+import { analyzeAgreement, analyzeQuery, generateWitness } from './groq.js';
 import dotenv from 'dotenv';
 import {AddFile, createAndStoreEmbedding} from "../script.js";
 
@@ -36,6 +36,21 @@ app.post('/chat', async (req, res) => {
         }
 
         const analysis = await analyzeQuery(text);
+        res.json(analysis);
+    } catch (error) {
+        console.error('Error analyzing agreement:', error);
+        res.status(500).json({ error: 'Error analyzing agreement' });
+    }
+});
+
+app.post('/witness', async (req, res) => {
+    try {
+        const { fileName } = req.body;
+        if (!fileName) {
+            return res.status(400).json({ error: 'No text provided' });
+        }
+
+        const analysis = await generateWitness(fileName);
         res.json(analysis);
     } catch (error) {
         console.error('Error analyzing agreement:', error);
