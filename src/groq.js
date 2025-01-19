@@ -440,7 +440,7 @@ Generate the complete agreement now, replacing all placeholders with the provide
 }
 
 export async function analyzeQuery(query) {
-  const aiResponse = await llm[1].invoke([
+  const aiResponse = await llm[0].invoke([
     {
       role: "system",
       content: `You are a query cleaning bot in the backend that analyzes user queries and outputs a JSON with a opening and closing curly bracket that contains a filtered out user query to search for in the body of huge text that we have. The JSON is of the form {'Query': '<this is the filtered out query>'}. DO NOT OUTPUT ANYTHING OTHER THAN THE JSON AND DO NOT ADD ANYTHING ELSE IN THE JSON. Just take the user question and distill out the actual query from it so we can perform a vector search on it. The query is {${query}}`,

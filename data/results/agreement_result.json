@@ -1,52 +1,87 @@
 {
-  "draftedBy": "undefined",
-  "draftedFor": "undefined",
-  "description": "undefined",
+  "draftedBy": "Arshdeep singh",
+  "draftedFor": "Ayush Chandekar",
+  "description": "This agreement is for leasing a property located at Powai from Arshdeep singh to Ayush Chandekar for a period of one month starting from 15th Feb, 25.",
   "nonNegotiableClauses": [
-    "The Service Provider is subject to penalties for downtime",
-    "This agreement constitutes the entire understanding between the parties and supersedes all prior agreements or understandings, whether written or oral."
+    "The lease term is non-negotiable",
+    "The property shall be used exclusively for residential purposes.",
+    "The Tenant shall not sublet the premises or use it for any commercial activities without the prior written consent of the Landlord.",
+    "Upon termination, the Tenant agrees to vacate the premises and return all keys and access devices to the Landlord",
+    "Guests may stay for up to 20 days without written permission from the Landlord"
   ],
   "deadlines": [
     {
-      "date": "Upon termination",
-      "description": "The Service Provider shall deliver all outstanding deliverables"
+      "date": "2025-02-15 12:00:00",
+      "description": "Commencement of the lease term"
     },
     {
-      "date": "2025-01-20",
-      "description": "Execution of the Service Level Agreement by both parties"
+      "date": "Vacating date",
+      "description": "Deposit refunded to the Tenant, subject to deductions for any damages or outstanding dues."
+    },
+    {
+      "date": "After 30 days of notice",
+      "description": "Tenant must vacate the premises"
+    },
+    {
+      "date": "2025-03-16",
+      "description": "Execution of the Lease Agreement"
     }
   ],
   "termsAndConditions": [
     [
-      "The Service Provider is responsible for meeting performance metrics outlined in Section 3",
-      2
-    ],
-    [
-      "Both parties agree to keep confidential information secure",
+      "The tenant agrees to pay a monthly rent of ₹50k",
       3
     ],
     [
-      "Either party may terminate the agreement with 30 days written notice",
+      "The tenant shall deposit a security amount of ₹NaN",
       3
     ],
     [
-      "This agreement is governed by the laws of India",
+      "The security deposit may be used to cover any damages or unpaid rent",
       3
     ],
     [
-      "Any amendments to this agreement must be made in writing and signed by both parties",
+      "The Tenant agrees to maintain the property in good condition and promptly notify the Landlord of any necessary repairs.",
       3
     ],
     [
-      "PIWOT will provide services to Arshdeep as per the terms and conditions mentioned in this agreement.",
+      "The Tenant shall be responsible for minor repairs, while the Landlord shall handle major repairs unless damage is caused by the Tenant's negligence.",
       3
     ],
     [
-      "Arshdeep agrees to pay PIWOT for the services as per the payment terms mentioned in this agreement.",
+      "The Tenant shall be responsible for the payment of all utilities, including electricity, water, and gas, unless otherwise agreed upon.",
       3
     ],
     [
-      "Any changes to this agreement must be agreed upon in writing by both parties.",
+      "The Tenant shall not make any alterations or improvements to the property without the prior written consent of the Landlord.",
+      3
+    ],
+    [
+      "Pets are allowed on the premises.",
+      4
+    ],
+    [
+      "The Agreement constitutes the entire understanding between the parties and supersedes all prior agreements or understandings, whether written or oral",
+      3
+    ],
+    [
+      "In case of loss or damage, the Tenant shall pay ₹400 for replacement",
+      3
+    ],
+    [
+      "Arshdeep , 983932902 will inspect the property if unoccupied for 4 or more consecutive days",
+      3
+    ],
+    [
+      "Tenant will vacate the property in good condition at the end of the lease term",
+      3
+    ],
+    [
+      "Landlord has the right to enter the property with proper notice",
+      3
+    ],
+    [
+      "Tenant is responsible for paying rent on time",
       2
     ]
   ]
