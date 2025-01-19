@@ -5,6 +5,7 @@ import path from 'path';
 import { categories } from './categories.js';
 import {AddFile, createAndStoreEmbedding} from "../script.js";
 import fs from 'fs';
+import { notifyDeadlines } from './notification.js';
 dotenv.config();
 createAndStoreEmbedding("data/", process.env.GOOGLE_API_KEY, "agreement");
 const app = express();
@@ -122,4 +123,5 @@ app.post('/witness', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+    notifyDeadlines();
 });
