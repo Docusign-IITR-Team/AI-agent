@@ -54,20 +54,25 @@ export async function createAndStoreEmbedding(folderPath, apiKey, collectionName
         const files = fs.readdirSync(folderPath);
         files.forEach(async (file) => {
                 const filePath = path.join(folderPath, file);
-
+            if (file.endsWith('.txt')) {
                 // Ensure it is a file (not a directory)
                 if (fs.lstatSync(filePath).isFile()) {
                      const content = fs.readFileSync(filePath, 'utf8');
             const lines = content.split('\n');
                     for (let i = 0; i < lines.length; i += 5) {
                         const batch = lines.slice(i, i + 5).join('\n');
-                        // console.log('\nBatch:\n' + batch);
+                        console.log('\nBatch:\n' + batch);
                         const document = { pageContent: batch, metadata: { source: filePath } };
+                        console.log(batch ," \n=============================")
+                        try{
                         await vectorStore.addDocuments([document]);
                     }
+                catch (errro) {
+                    console.log("ERRRR",errro);
+                }}
                     
         console.log(`Document from ${filePath} has been embedded and stored in ChromaDB.`);
-                }
+                }}
         
             });
 
@@ -86,6 +91,7 @@ export async function createAndStoreEmbedding(folderPath, apiKey, collectionName
 }
 
 export async function AddFile( filePath ) {
+    try{
     vectorStore = getVectorStore();
     if (fs.lstatSync(filePath).isFile()) {
         const content = fs.readFileSync(filePath, 'utf8');
@@ -100,7 +106,9 @@ export async function AddFile( filePath ) {
    }
     console.log(`Document from ${filePath} has been embedded and stored in ChromaDB.`);
    setVectorStore(vectorStore);
-}
+}catch (error) {
+    console.error('Error creating and storing embedding:', error);
+}}
 export async function fetchRelatedDoc(query) {
     // const embeddings = new GoogleGenerativeAIEmbeddings({
     //         apiKey: apiKey,
@@ -130,9 +138,13 @@ export async function fetchRelatedDoc(query) {
         const retrieverSimilarity = await retriever.invoke(query)
         // console.log(retrieverSimilarity);
         const jsonresp = {
-            // similaritySearchWithScoreResults: similarityS/earchWithScoreResults,
-            retrieverSimilarity: retrieverSimilarity
+            retrieverSimilarity: retrieverSimilarity.map(item => ({
+                pageContent: item.pageContent,
+                metadata: item.metadata, // Include metadata
+                id: item.id,
+            }))
         };
+        console.log(retrieverSimilarity[0].metadata)
         console.log(jsonresp)
         return jsonresp
        

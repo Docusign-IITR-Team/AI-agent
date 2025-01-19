@@ -170,7 +170,7 @@ export async function analyzeQuery(query) {
   try {
     // jsonResponse = JSON.parse(aiResponse.content);
     jsonResponse = await fetchRelatedDoc(aiResponse.content);
-      console.log(jsonResponse);
+      console.log("JSONRESPONSE",jsonResponse);
       return jsonResponse
   } catch (error) {
     console.error("Failed to parse AI response:", error);

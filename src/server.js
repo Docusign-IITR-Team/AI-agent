@@ -2,7 +2,7 @@ import express from 'express';
 import { analyzeAgreement, analyzeQuery, generateWitness } from './groq.js';
 import dotenv from 'dotenv';
 import {AddFile, createAndStoreEmbedding} from "../script.js";
-
+import fs from 'fs';
 dotenv.config();
 createAndStoreEmbedding("data/", process.env.GOOGLE_API_KEY, "agreement");
 const app = express();
@@ -16,13 +16,14 @@ app.post('/analyze', async (req, res) => {
         if (!text) {
             return res.status(400).json({ error: 'No text provided' });
         }
-        fs.writeFileSync(`data/${fileName}.txt`, JSON.stringify(analysis, null, 2));
         const analysis = await analyzeAgreement(text);
+        fs.writeFileSync(`data/${fileName}.txt`, JSON.stringify(text, null, 2));
 
         fs.writeFileSync("data/results/agreement_result.json", JSON.stringify(analysis, null, 2));
         await AddFile(`data/${fileName}.txt`);
         res.json(analysis);
     } catch (error) {
+
         console.error('Error analyzing agreement:', error);
         res.status(500).json({ error: 'Error analyzing agreement' });
     }
@@ -34,8 +35,9 @@ app.post('/chat', async (req, res) => {
         if (!text) {
             return res.status(400).json({ error: 'No text provided' });
         }
-
+        // console.log("TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",text);
         const analysis = await analyzeQuery(text);
+        console.log("ANAYLYSISSSSSS",analysis);
         res.json(analysis);
     } catch (error) {
         console.error('Error analyzing agreement:', error);
