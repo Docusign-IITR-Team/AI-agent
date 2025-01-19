@@ -182,5 +182,107 @@ export const categories = {
         "question": "What is being used to secure the loan?"
       }
     ]
+  },
+  "sla": {
+    "heading": "Service Level Agreement",
+    "template": "sla.txt",
+    "questions": [
+      {
+        "field": "agreement_date",
+        "question": "What is the date of this SLA? (Format: Day Month Year)"
+      },
+      {
+        "field": "provider_name",
+        "question": "What is the name of the Service Provider (company or individual)?"
+      },
+      {
+        "field": "provider_address",
+        "question": "What is the address of the Service Provider?"
+      },
+      {
+        "field": "client_name",
+        "question": "What is the name of the Client (company or individual)?"
+      },
+      {
+        "field": "client_address",
+        "question": "What is the address of the Client?"
+      },
+      {
+        "field": "service_description",
+        "question": "Briefly describe the services being provided (e.g., 'IT Support Services', 'Cloud Hosting Services')"
+      },
+      {
+        "field": "start_date",
+        "question": "What is the start date of the service? (Format: Day Month Year)"
+      },
+      {
+        "field": "end_date",
+        "question": "What is the end date of the service? (Format: Day Month Year)"
+      },
+      {
+        "field": "service_1",
+        "question": "Describe the first main service to be provided"
+      },
+      {
+        "field": "service_2",
+        "question": "Describe the second main service to be provided"
+      },
+      {
+        "field": "service_3",
+        "question": "Describe the third main service to be provided"
+      },
+      {
+        "field": "uptime_guarantee",
+        "question": "What is the uptime guarantee? (e.g., '99.9% availability per month')"
+      },
+      {
+        "field": "response_time",
+        "question": "What is the response time for critical issues?"
+      },
+      {
+        "field": "resolution_time",
+        "question": "What is the resolution time for critical issues?"
+      },
+      {
+        "field": "service_fee",
+        "question": "What is the service fee amount? (in ₹)"
+      },
+      {
+        "field": "payment_frequency",
+        "question": "How often should payments be made? (e.g., 'monthly', 'quarterly')"
+      },
+      {
+        "field": "payment_due_date",
+        "question": "On what day of the billing cycle is payment due?"
+      },
+      {
+        "field": "late_fee",
+        "question": "What is the late payment fee per day? (in ₹)"
+      },
+      {
+        "field": "support_hours",
+        "question": "What are the support hours? (e.g., '24/7 Support', '9 AM to 6 PM IST, Monday to Friday')"
+      },
+      {
+        "field": "support_channels",
+        "question": "What support channels are available? (e.g., 'Email, Phone, Chat')"
+      },
+      {
+        "field": "penalty_rate",
+        "question": "What is the penalty rate for not meeting performance metrics? (e.g., '10% credit of monthly fee per 1% downtime')"
+      },
+      {
+        "field": "notice_period",
+        "question": "What is the notice period required for termination? (e.g., '30 days')"
+      },
+      {
+        "field": "governing_law",
+        "question": "Which state/country's laws govern this agreement?"
+      },
+      {
+        "field": "signature_date",
+        "question": "What is the date when this agreement will be signed? (Format: Day Month Year)"
+      }
+    ]
   }
 };
