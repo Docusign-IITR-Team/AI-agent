@@ -156,83 +156,83 @@ async function analyzeAgreementParts(agreementText, llm_number) {
 }
 
 export async function generateAgreement(category, answers, templateContent) {
-  // Create a mapping of answers to placeholders
-  let agreement = templateContent;
+  if (category === 'house_renting') {
+    let agreement = templateContent;
 
-  // Replace the date in the first line
-  agreement = agreement.replace(
-    '___ day of ________, 20',
-    answers.lease_date
-  );
+    // Replace the date in the first line
+    agreement = agreement.replace(
+      '___ day of ________, 20',
+      answers.lease_date
+    );
 
-  // Replace landlord details
-  agreement = agreement.replace(
-    '[Landlord\'s Full Name]',
-    answers.landlord_name
-  ).replace(
-    '[Landlord\'s Address]',
-    answers.landlord_contact_address
-  );
+    // Replace landlord details
+    agreement = agreement.replace(
+      '[Landlord\'s Full Name]',
+      answers.landlord_name
+    ).replace(
+      '[Landlord\'s Address]',
+      answers.landlord_contact_address
+    );
 
-  // Replace tenant details
-  agreement = agreement.replace(
-    '[Tenant\'s Full Name]',
-    answers.tenant_name
-  ).replace(
-    '[Tenant\'s Address]',
-    answers.tenant_contact_address
-  );
+    // Replace tenant details
+    agreement = agreement.replace(
+      '[Tenant\'s Full Name]',
+      answers.tenant_name
+    ).replace(
+      '[Tenant\'s Address]',
+      answers.tenant_contact_address
+    );
 
-  // Replace property address
-  agreement = agreement.replace(
-    '[Complete Address of the Property]',
-    answers.property_address
-  );
+    // Replace property address
+    agreement = agreement.replace(
+      '[Complete Address of the Property]',
+      answers.property_address
+    );
 
-  // Replace lease terms
-  agreement = agreement.replace(
-    '[Start Date]',
-    answers.lease_term_start
-  ).replace(
-    '[End Date]',
-    answers.lease_term_end
-  );
+    // Replace lease terms
+    agreement = agreement.replace(
+      '[Start Date]',
+      answers.lease_term_start
+    ).replace(
+      '[End Date]',
+      answers.lease_term_end
+    );
 
-  // Replace rent details
-  agreement = agreement.replace(
-    '₹[Amount]',
-    `₹${answers.monthly_rent}`
-  ).replace(
-    '[Due Date]',
-    answers.rent_due_date
-  );
+    // Replace rent details
+    agreement = agreement.replace(
+      '₹[Amount]',
+      `₹${answers.monthly_rent}`
+    ).replace(
+      '[Due Date]',
+      answers.rent_due_date
+    );
 
-  // Replace security deposit
-  agreement = agreement.replace(
-    'security amount of ₹[Amount]',
-    `security amount of ₹${answers.monthly_rent * 2}`
-  );
+    // Replace security deposit
+    agreement = agreement.replace(
+      'security amount of ₹[Amount]',
+      `security amount of ₹${answers.monthly_rent * 2}`
+    );
 
-  // Replace pet policy
-  agreement = agreement.replace(
-    '[Specify pet policy: e.g., "Pets are not allowed on the premises." or "Pets are allowed with prior written consent and may require an additional deposit."]',
-    `Pets are ${answers.allow_pets} on the premises`
-  );
+    // Replace pet policy
+    agreement = agreement.replace(
+      '[Specify pet policy: e.g., "Pets are not allowed on the premises." or "Pets are allowed with prior written consent and may require an additional deposit."]',
+      `Pets are ${answers.allow_pets} on the premises`
+    );
 
-  // Replace notice period
-  agreement = agreement.replace(
-    '[Notice Period, e.g., "30 days"]',
-    '30 days'
-  );
+    // Replace notice period
+    agreement = agreement.replace(
+      '[Notice Period, e.g., "30 days"]',
+      '30 days'
+    );
 
-  // Replace governing law
-  agreement = agreement.replace(
-    '[State/Country]',
-    'India'
-  );
+    // Replace governing law
+    agreement = agreement.replace(
+      '[State/Country]',
+      'India'
+    );
 
-  // Add additional sections for keys, inspection, and guests
-  const additionalSections = `\n12. Keys and Security
+    // Add additional sections for keys, inspection, and guests
+    const additionalSections = `\n12. Keys and Security
 
 The Tenant acknowledges receipt of all keys and access devices. In case of loss or damage, the Tenant shall pay ₹${answers.key_replacement_fee} for replacement.
 
@@ -251,14 +251,14 @@ For all notices under this Agreement:
 Landlord Contact Phone: ${answers.landlord_contact_phone}
 Tenant Contact Phone: ${answers.tenant_contact_phone}`;
 
-  // Insert additional sections before the witness section
-  agreement = agreement.replace(
-    /IN WITNESS WHEREOF/,
-    additionalSections + '\n\nIN WITNESS WHEREOF'
-  );
+    // Insert additional sections before the witness section
+    agreement = agreement.replace(
+      /IN WITNESS WHEREOF/,
+      additionalSections + '\n\nIN WITNESS WHEREOF'
+    );
 
-  // Replace signature and witness sections
-  const signatureSection = `Landlord: ${answers.landlord_name}              Tenant: ${answers.tenant_name}
+    // Replace signature and witness sections
+    const signatureSection = `Landlord: ${answers.landlord_name}              Tenant: ${answers.tenant_name}
 
 Date: ${answers.agreement_signature_date}          Date: ${answers.agreement_signature_date}
 
@@ -267,14 +267,177 @@ Witnesses:
 1. ${answers.landlord_name}                     2. ${answers.tenant_name}
 Date: ${answers.agreement_signature_date}        Date: ${answers.agreement_signature_date}`;
 
-  agreement = agreement.replace(
-    /Landlord: ___________________________ Tenant: ___________________________\s*\nDate: _______________________________ Date: _______________________________\s*\nWitnesses:\s*\n\s*___________________________ 2\. ___________________________\s*\nDate: _______________________________ Date: _______________________________/,
-    signatureSection
-  );
+    agreement = agreement.replace(
+      /Landlord: ___________________________ Tenant: ___________________________\s*\nDate: _______________________________ Date: _______________________________\s*\nWitnesses:\s*\n\s*___________________________ 2\. ___________________________\s*\nDate: _______________________________ Date: _______________________________/,
+      signatureSection
+    );
 
-  return agreement;
+    return agreement;
+  } else if (category === 'sla') {
+    let agreement = templateContent;
+
+    // Replace the date in the first line
+    agreement = agreement.replace(
+      '___ day of ______, 20',
+      answers.agreement_date
+    );
+
+    // Replace service provider details
+    agreement = agreement.replace(
+      '[Service Provider\'s Full Name or Company Name]',
+      answers.provider_name
+    ).replace(
+      '[Service Provider\'s Address]',
+      answers.provider_address
+    );
+
+    // Replace client details
+    agreement = agreement.replace(
+      '[Client\'s Full Name or Company Name]',
+      answers.client_name
+    ).replace(
+      '[Client\'s Address]',
+      answers.client_address
+    );
+
+    // Replace service description
+    agreement = agreement.replace(
+      '[Brief description of the services provided, e.g., "IT Support Services" or "Cloud Hosting Services"]',
+      answers.service_description
+    );
+
+    // Replace term dates
+    agreement = agreement.replace(
+      '[Start Date]',
+      answers.start_date
+    ).replace(
+      '[End Date]',
+      answers.end_date
+    );
+
+    // Replace services list
+    agreement = agreement.replace(
+      '[Service 1 description]',
+      answers.service_1
+    ).replace(
+      '[Service 2 description]',
+      answers.service_2
+    ).replace(
+      '[Service 3 description]',
+      answers.service_3
+    );
+
+    // Replace performance metrics
+    agreement = agreement.replace(
+      '[e.g., "99.9% availability per month"]',
+      answers.uptime_guarantee
+    ).replace(
+      '[e.g., "Initial response within 4 hours for critical issues"]',
+      answers.response_time
+    ).replace(
+      '[e.g., "Critical issues resolved within 8 hours"]',
+      answers.resolution_time
+    );
+
+    // Replace payment details
+    agreement = agreement.replace(
+      '₹[Amount]',
+      `₹${answers.service_fee}`
+    ).replace(
+      '[frequency, e.g., "monthly"]',
+      answers.payment_frequency
+    ).replace(
+      '[Due Date]',
+      answers.payment_due_date
+    ).replace(
+      '₹[Late Fee Amount]',
+      `₹${answers.late_fee}`
+    );
+
+    // Replace support details
+    agreement = agreement.replace(
+      '[e.g., "24/7 Support" or "9 AM to 6 PM IST, Monday to Friday"]',
+      answers.support_hours
+    ).replace(
+      '[e.g., "Email, Phone, Chat"]',
+      answers.support_channels
+    );
+
+    // Replace penalty details
+    agreement = agreement.replace(
+      '[e.g., "10% credit of the monthly service fee for each 1% of downtime exceeding the uptime guarantee."]',
+      answers.penalty_rate
+    );
+
+    // Replace notice period
+    agreement = agreement.replace(
+      '[Notice Period, e.g., "30 days"]',
+      answers.notice_period
+    );
+
+    // Replace governing law
+    agreement = agreement.replace(
+      '[State/Country]',
+      answers.governing_law
+    );
+
+    // Replace signature section
+    const signatureSection = `Service Provider: ${answers.provider_name}
+Client: ${answers.client_name}
+
+Date: ${answers.signature_date}
+Date: ${answers.signature_date}
+
+Witnesses:
+
+Date: ${answers.signature_date}
+
+Date: ${answers.signature_date}`;
+
+    agreement = agreement.replace(
+      /Service Provider: ___________________________\s*Client: ___________________________\s*\nDate: _______________________________\s*Date: _______________________________\s*\nWitnesses:\s*\nDate: _______________________________\s*\nDate: _______________________________/,
+      signatureSection
+    );
+
+    return agreement;
+  } else {
+    // For other categories, use Groq AI to generate the agreement
+    const llm_number = 0;
+    const formattedAnswers = Object.entries(answers)
+      .map(([field, value]) => `${field}: ${value}`)
+      .join('\n');
+
+    const prompt = `You are a legal document assistant. Generate a ${category} agreement by following these instructions carefully:
+
+1. Use the following template as your base structure. DO NOT deviate from its format and sections:
+${templateContent}
+
+2. Use these answers to fill in the agreement:
+${formattedAnswers}
+
+3. Important guidelines:
+- Replace all placeholders with the corresponding answers
+- Keep the exact same structure, sections, and legal language as the template
+- Format dates consistently
+- Maintain professional legal language throughout
+- Keep all section numbers and titles exactly as they are in the template
+
+Generate the complete agreement now, replacing all placeholders with the provided answers while maintaining the exact structure and format of the template.`;
+
+    const aiResponse = await llm[llm_number].invoke([
+      {
+        role: "system",
+        content: "You are a legal document assistant that generates precise and professional agreements based on templates and provided information."
+      },
+      {
+        role: "user",
+        content: prompt
+      }
+    ]);
+
+    return aiResponse.content;
+  }
 }
-
 
 export async function analyzeQuery(query) {
   const aiResponse = await llm[0].invoke([

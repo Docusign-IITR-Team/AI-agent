@@ -1,158 +1,73 @@
 {
-  "draftedBy": "(Name of the Owner), S/o or D/o. (Father’s Name of the Owner), (Permanent Address of the Owner)",
-  "draftedFor": "(Name of the Tenant), S/o or D/o. (Father’s Name of the Tenant), Working/Studying at (Address of the Office/Studying Institution), having a permanent address at Complete permanent Address of the Tenant",
-  "description": "This RENTAL AGREEMENT is executed at (PLACE) on this (Date) day of (Month), (Year) by and between the owner and the tenant for the rental of a property situated at (Complete Address of the Rented Property)",
+  "draftedBy": "ayush",
+  "draftedFor": "arsh",
+  "description": "This agreement is for the lease of a property between ayush and arsh.",
   "nonNegotiableClauses": [
-    "The tenant shall not sublet or assign the whole or any part of the Demised Premises without the written consent of the Owner",
-    "The tenant shall pay the rent in advance on or before the 1st day of each calendar month",
-    "The Tenant shall pay a monthly maintenance charge for common area maintenance.",
-    "The Tenant shall pay for the running costs of the elevator and generator.",
-    "The tenant is responsible for paying electricity & water bills upon vacation of the property",
-    "The tenant must pay a refundable security deposit at the time of signing the rent agreement",
-    "The Tenant is entitled to hold possession of the Rented premises without payment of rent if the Owner fails to refund the security deposit",
-    "The Tenant shall not sublet, assign or part with the demised premises in whole or part thereof to any person in any circumstances whatsoever",
-    "The Owner has the right to visit the premises for inspection or repairs.",
-    "The Tenant is responsible for complying with all local rules and regulations.",
-    "The owner will pay all taxes and cesses levied on the premises by local or government authorities. Any other payment in the nature of subscription or periodical fee to the welfare association shall also be paid by the owner.",
-    "The tenant will keep the owner free and harmless from any claims, proceedings, demands, or actions by others with respect to quiet possession of the premises.",
-    "The tenant will pay damages calculated at two times the rent for any period of occupation commencing from the expiry of the Rent period if the premises are not vacated at the termination of the Rent period.",
-    "Clause 1: The tenant cannot make any major structural changes to the property.",
-    "Clause 2: The tenant is responsible for paying all utilities."
+    "The lease term is from 1st jan 2025 to 1st dec 2025",
+    "The tenant must pay a monthly rent of ₹50000",
+    "The property shall be used exclusively for residential purposes.",
+    "Pets are not allowed on the premises.",
+    "Landlord has the right to enter the property in case of emergency",
+    "Tenant is responsible for keeping the property in good condition"
   ],
   "deadlines": [
     {
-      "date": "1st day of each calendar month",
-      "description": "Payment of rent"
+      "date": "2025-01-01",
+      "description": "Payment of the first month's rent and security deposit"
     },
     {
-      "date": "At the beginning of each month",
-      "description": "Payment of monthly maintenance charge"
+      "date": "Upon moving in",
+      "description": "Payment of security deposit and first month's rent"
     },
     {
-      "date": "at the time of signing the Rent Agreement",
-      "description": "Payment of the security deposit"
-    },
-    {
-      "date": "early termination or expiry of the Rent agreement",
-      "description": "Refund of the security deposit by the Owner to the Tenant"
-    },
-    {
-      "date": "Not specified",
-      "description": "Restoration of changes made by the Tenant to the original state on termination of tenancy."
-    },
-    {
-      "date": "end of any month",
-      "description": "One month prior notice in writing by either party to terminate the agreement"
-    },
-    {
-      "date": "on expiry of the Rent period",
-      "description": "Hand over of vacant and peaceful possession of the demised premises"
-    },
-    {
-      "date": "2023-03-01",
-      "description": "Payment of first month's rent and security deposit"
+      "date": "Date: yes",
+      "description": "Landlord and Tenant have to execute this Lease Agreement"
     }
   ],
   "termsAndConditions": [
     [
-      "The tenant shall keep the Demised Premises in good and tenantable repair and condition during the tenancy",
+      "The security deposit of ₹100000 will be refunded upon vacating the premises, subject to deductions for any damages or outstanding dues",
       3
     ],
     [
-      "The tenant shall not make any structural alterations or additions to the Demised Premises without the prior written consent of the Owner",
+      "The tenant must pay a monthly rent of ₹50000 on or before the 5th of each month",
+      3
+    ],
+    [
+      "The Tenant agrees to maintain the property in good condition and promptly notify the Landlord of any necessary repairs.",
+      3
+    ],
+    [
+      "The Tenant is responsible for minor repairs, while the Landlord handles major repairs unless damage is caused by the Tenant's negligence.",
+      3
+    ],
+    [
+      "The Tenant is responsible for the payment of all utilities.",
+      3
+    ],
+    [
+      "The Tenant shall not make any alterations or improvements to the property without the prior written consent of the Landlord.",
       2
     ],
     [
-      "The tenant shall not use the Demised Premises for any purpose other than that for which it is let",
+      "Either party may terminate this Agreement by providing 30 days written notice to the other party.",
       3
     ],
     [
-      "The tenant shall pay all public charges and taxes levied or payable in respect of the Demised Premises",
-      2
-    ],
-    [
-      "The Tenant shall pay for electricity and water usage as per bills received.",
+      "Tenant will pay a security deposit",
       3
     ],
     [
-      "The Owner is responsible for paying and clearing all utility bills up to the date of possession handover.",
-      1
-    ],
-    [
-      "The security deposit will be refunded to the tenant after adjusting any dues or costs towards damages",
+      "Tenant will pay rent on the first of every month",
       3
     ],
     [
-      "The tenant is responsible for damages caused by negligence or person they are responsible for, excluding normal wear & tear and damages due to act of god",
-      2
-    ],
-    [
-      "The Owner shall hand over all sanitary, electrical and other fittings and fixtures and appliances in the premises in good working condition",
+      "Landlord is responsible for maintaining the structure of the building",
       4
     ],
     [
-      "The Tenant is responsible for day-to-day minor repairs at his/her own expense",
-      3
-    ],
-    [
-      "The Tenant is responsible for any structural repairs.",
-      "Rating: 1"
-    ],
-    [
-      "The Tenant can install air-conditioners and other electrical gadgets at their own cost.",
-      "Rating: 3"
-    ],
-    [
-      "The Tenant must obtain prior written consent from the Owner for any structural additions or alterations.",
-      "Rating: 2"
-    ],
-    [
-      "The Tenant is responsible for removing any installed equipment and restoring changes made.",
-      "Rating: 2"
-    ],
-    [
-      "The Owner can enter the premises for repairs or construction.",
-      "Rating: 1"
-    ],
-    [
-      "The Tenant must comply with all local rules and regulations.",
-      "Rating: 3"
-    ],
-    [
-      "The tenant shall maintain the demised premises in good and tenable condition and all the minor repairs such as leakage in the sanitary fittings, water taps and electrical usage etc. shall be carried out by the tenant.",
-      3
-    ],
-    [
-      "The owner shall pay for all taxes/cesses levied on the premises by the local or government authorities in the way of property tax for the premises and so on.",
-      5
-    ],
-    [
-      "The tenant and owners represent and warrant that they are fully empowered and competent to make this Rent.",
-      3
-    ],
-    [
-      "Both the parties shall observe and adhere to the terms and conditions contained hereinabove.",
-      3
-    ],
-    [
-      "The lease term is for 12 months.",
-      3
-    ],
-    [
-      "The tenant is responsible for maintaining the property in a clean and habitable condition.",
-      4
-    ],
-    [
-      "The owner has the right to enter the property with proper notice.",
-      3
-    ],
-    [
-      "The tenant is responsible for paying late fees if rent is not paid on time.",
+      "Tenant is responsible for paying utilities",
       2
-    ],
-    [
-      "The security deposit will be returned to the tenant at the end of the lease term, less any damages.",
-      3
     ]
   ]
 }

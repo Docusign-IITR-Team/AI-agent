@@ -21,7 +21,7 @@ app.get('/categories', (req, res) => {
 app.post('/generate/:category', async (req, res) => {
     try {
         const { category } = req.params;
-        const { answers } = req.body;
+        let { answers } = req.body;
 
         if (!categories[category]) {
             return res.status(400).json({ error: 'Invalid category' });
@@ -31,16 +31,20 @@ app.post('/generate/:category', async (req, res) => {
             return res.status(400).json({ error: 'No answers provided' });
         }
 
+        // Remove any category from answers object as we use the URL parameter
+        delete answers.category;
+
         // Read template file with absolute path
-        const templatePath = path.join(process.cwd(), 'public', 'rent.txt');
+        const templatePath = path.join(process.cwd(), 'public', categories[category].template);
         console.log('Reading template from:', templatePath);
         
         if (!fs.existsSync(templatePath)) {
+            console.error(`Template file not found at ${templatePath}`);
             return res.status(500).json({ error: 'Template file not found' });
         }
 
         const templateContent = fs.readFileSync(templatePath, 'utf-8');
-        console.log('Template content:', templateContent);
+        console.log('Template content length:', templateContent.length);
 
         // Generate agreement
         const generatedAgreement = await generateAgreement(category, answers, templateContent);

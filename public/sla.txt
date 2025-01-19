@@ -1,0 +1,77 @@
+SERVICE LEVEL AGREEMENT (SLA)
+
+This Service Level Agreement is made and entered into on this ___ day of ______, 20, by and between:
+
+Service Provider: [Service Provider's Full Name or Company Name], located at [Service Provider's Address] (hereinafter referred to as the "Service Provider")
+
+Client: [Client's Full Name or Company Name], located at [Client's Address] (hereinafter referred to as the "Client")
+
+Service Description: [Brief description of the services provided, e.g., "IT Support Services" or "Cloud Hosting Services"]
+
+1. Term of Agreement
+The Service Provider agrees to provide the services outlined in this Agreement for a term commencing on [Start Date] and ending on [End Date], unless terminated earlier in accordance with the provisions of this Agreement.
+
+2. Services Provided
+The Service Provider shall perform the following services:
+
+[Service 1 description]
+[Service 2 description]
+[Service 3 description]
+The scope of these services may be adjusted by mutual written agreement between the Service Provider and the Client.
+
+3. Performance Metrics
+The Service Provider agrees to meet the following performance standards:
+
+Uptime Guarantee: [e.g., "99.9% availability per month"]
+Response Time: [e.g., "Initial response within 4 hours for critical issues"]
+Resolution Time: [e.g., "Critical issues resolved within 8 hours"]
+Regular performance reports will be provided to the Client upon request.
+
+4. Fees and Payment Terms
+The Client agrees to pay the Service Provider ₹[Amount] on a [frequency, e.g., "monthly"] basis for the services rendered. Payments shall be made on or before the [Due Date] of each billing cycle.
+
+Late payments will incur a fee of ₹[Late Fee Amount] per day of delay.
+
+5. Support
+The Service Provider shall provide the following support services:
+
+Support Hours: [e.g., "24/7 Support" or "9 AM to 6 PM IST, Monday to Friday"]
+Support Channels: [e.g., "Email, Phone, Chat"]
+6. Responsibilities
+Service Provider's Responsibilities:
+
+Ensure the services are delivered as per agreed standards.
+Provide timely communication regarding maintenance, downtime, or changes.
+Client's Responsibilities:
+
+Provide necessary access, resources, and information for the Service Provider to perform the services.
+Promptly report any issues or concerns regarding the services.
+7. Penalties for Non-Compliance
+If the Service Provider fails to meet the performance metrics outlined in Section 3, the following penalties may apply:
+
+[e.g., "10% credit of the monthly service fee for each 1% of downtime exceeding the uptime guarantee."]
+8. Confidentiality
+Both parties agree to keep any confidential information shared during the course of this Agreement secure and not disclose it to third parties without prior written consent.
+
+9. Termination
+Either party may terminate this Agreement by providing [Notice Period, e.g., "30 days"] written notice to the other party. Upon termination, the Service Provider shall deliver all outstanding deliverables, and the Client shall settle any pending dues.
+
+10. Governing Law
+This Agreement shall be governed by and construed in accordance with the laws of [State/Country].
+
+11. Miscellaneous
+Any amendments to this Agreement must be made in writing and signed by both parties.
+This Agreement constitutes the entire understanding between the parties and supersedes all prior agreements or understandings, whether written or oral.
+IN WITNESS WHEREOF, the parties hereto have executed this Service Level Agreement as of the day and year first above written.
+
+Service Provider: ___________________________
+Client: ___________________________
+
+Date: _______________________________
+Date: _______________________________
+
+Witnesses:
+
+Date: _______________________________
+
+Date: _______________________________
